@@ -77,7 +77,9 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	<!--creating blank canvas with a set width and height-->
 	<!--setting an id for canvas to be able to access it later-->
 	<!--canvas is placed underneath text on front page-->
-	<canvas id="canvas" width="300" height="225"></canvas>
+	<!--style element creates border; without the border, canvas would just be white-->
+	<!--#000000 represents the black color of the border-->
+	<canvas id="canvas" width="300" height="225"> style="border:1px solid #000000;"></canvas>
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
