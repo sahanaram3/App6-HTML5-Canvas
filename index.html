@@ -35,9 +35,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
-var docMod = document.lastModified; // loads last modified time stamp into docMod variable
-alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
-console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
+	var docMod = document.lastModified; // loads last modified time stamp into docMod variable
+	alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
+	console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 	
 	//function draws rectangle when called
 	//first line finds the <canvas> element 
@@ -47,6 +47,17 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 		var a_canvas = document.getElementById("a");
 		var a_context = a_canvas.getContext("2d");
 		a_context.fillRect(50,25,150,100);
+	}
+	
+	//function writes my name on canvas
+	//first line finds the <canvas> element
+	//second line gets name context where all methods and properties are defined
+	//third line fills the text with the actual name 
+	function writeName(){
+		var myName = document.getElementByID("a");
+		var nameContext = d.getContext("2d");
+		nameContext.font = "bold 12px sans-serif";
+		nameContext.fillText("Sahana Ram", 8, 5);
 	}
 	
 </script>
@@ -94,6 +105,10 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	<!--creating button for drawing the rectangle-->
 	<!--calls the rectangle function when clicked to draw a rectangle-->
 	<a onClick="drawRect();" class = "w3-btn w3-black"> Draw Rectangle</a>
+	
+	<!--creating button for writing my name-->
+	<!--calls the write name function when clicked to write my name-->
+	<a onClick="writeName();" class = "w3-btn w3-black"> My Name</a>
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
