@@ -54,9 +54,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	//second line gets name context where all methods and properties are defined
 	//third line fills the text with the actual name 
 	function writeName(){
-		var myName = document.getElementByID("a");
+		var myName = document.getElementById("a");
 		var nameContext = myName.getContext("2d");
-		nameContext.font = "bold 20px sans-serif";
+		nameContext.font = "bold 20px Arial";
 		nameContext.fillText("Sahana Ram", 10, 50);
 	}
 	
@@ -104,11 +104,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<canvas id="a" width="300" height="225" style="border:1px solid #000000;"></canvas>
 	<!--creating button for drawing the rectangle-->
 	<!--calls the rectangle function when clicked to draw a rectangle-->
-	<a onClick="drawRect();" class = "w3-btn w3-black"> Draw Rectangle</a>
+	<a onclick="drawRect();" class = "w3-btn w3-black"> Draw Rectangle</a>
 	
 	<!--creating button for writing my name-->
 	<!--calls the write name function when clicked to write my name-->
-	<a onClick="writeName();" class = "w3-btn w3-black"> My Name</a>
+	<a onclick="writeName();" class = "w3-btn w3-black"> My Name</a>
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
