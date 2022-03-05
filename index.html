@@ -60,6 +60,18 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		nameContext.fillText("Sahana Ram", 10, 50);
 	}
 	
+	//function writes my name on canvas
+	//first line finds the <canvas> element
+	//second line gets image context where all methods and properties are defined
+	//third line is the ID of the actual image, image link is placed inside
+	//fourth line is drawing the actual image with dimensions
+	function displayImage(){
+		var image = document.getElementbyId("a");
+		var picContext = image.getContext("2d");
+		var img = document.getElementById("https://lh4.ggpht.com/ITkK1XPqeD71DdPVjacIc_27TfwsFp4FTXIxFqAYtQ8xGhzkYbRvJhrMWlojBjZbn00ZFiZIffDX-UQFsSC060dWUwxBMcGtjA");
+		picContext.drawImage(img,10,10);
+	}
+	
 </script>
 
 
@@ -109,6 +121,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<!--creating button for writing my name-->
 	<!--calls the write name function when clicked to write my name-->
 	<a onclick="writeName();" class = "w3-btn w3-black"> My Name</a>
+	
+	<!--creating button to display the image-->
+	<!--calls the display image function when clicked to display random image-->
+	<a onclick="displayImage();" class = "w3-btn w3-black"> Molecule Image</a>
+	
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
