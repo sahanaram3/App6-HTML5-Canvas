@@ -45,7 +45,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	//third line fills the rectangle with a color based on coordinates given 
 	function drawRect(){
 		var a_canvas = document.getElementById("a");
-		var a_canvas = a_canvas.getContext("2d");
+		var a_context = a_canvas.getContext("2d");
 		a_context.fillRect(50,25,150,100);
 	}
 	
@@ -93,7 +93,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	<canvas id="a" width="300" height="225" style="border:1px solid #000000;"></canvas>
 	<!--creating button for drawing the rectangle-->
 	<!--calls the rectangle function when clicked to draw a rectangle-->
-	<a onClick="drawRect();" class = w3-btn w3-black w3-round"> Draw Rectangle </a>
+	<a onClick="drawRect();" class = w3-btn w3-black> Draw Rectangle </a>
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
