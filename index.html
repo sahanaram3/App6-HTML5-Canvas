@@ -75,7 +75,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	}
 	
 	function clearCanvas(){
-		const context = canvas.getContext("2d");
+		var canvas = document.getElementById("a");
+		var context = canvas.getContext("2d");
 		context.clearRect(0, 0, canvas.width, canvas.height);
 	}
 	
