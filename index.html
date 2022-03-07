@@ -60,6 +60,20 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		nameContext.fillText("Sahana Ram", 10, 50);
 	}
 	
+	//function displays a picture on canvas
+	//first line finds the <canvas> element
+	//second line gets picture context where all methods and properties are defined
+	//lines 3-6 are creating new image object, inputting new image, and drawing the new image
+	function displayImage(){
+		var pic = document.getElementById("a");
+		var picContext = pic.getContext("2d");
+		var molecules = new Image();
+		molecules.src = "https://fsr.eui.eu/wp-content/uploads/molecules.jpg";
+		molecules.onload = function(){
+			picContext.drawImage(molecules, 0, 0, 200, 200);
+		}
+	}
+	
 </script>
 
 
@@ -118,7 +132,7 @@ img, object{
 	<!--calls the display image function when clicked to display random image-->
 	<a onclick="displayImage();" class = "w3-btn w3-black"> Molecule Image</a>
 	
-
+	
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
