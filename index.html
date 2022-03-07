@@ -17,10 +17,12 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+The goal of this code is to generate an empty canvas onto the webpage, for which the user can choose to do one or more of the following actions: draw a rectangle,
+write my name (Sahana Ram), display an image of molecules, or clear the canvas completley. Essentially, the code serves to display a variety of objects, such as
+text, shapes, and images. 
  
 Known Issues:
-blah, blah, blah, blah
+Although the rubric states that the webpage has the 4 buttons with different options below the canvas, the buttons lie beside the canvas on my website. 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
@@ -38,6 +40,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	var docMod = document.lastModified; // loads last modified time stamp into docMod variable
 	alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 	console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
+	
+	
+	// overall notes:
+	// getElementById finds the canvas element defined as "a"
+	// must create context variable of the canvas element to retrieve information
+	// last action is specific to each function (eg. fillRect, fillText, etc)
 	
 	//function draws rectangle when called
 	//first line finds the <canvas> element 
@@ -74,6 +82,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		}
 	}
 	
+	//function clears the canvas
+	//first line finds the <canvas> element
+	//second line gets canvas context where all methods and properties are defined
+	//third line clears the canvas completley 
 	function clearCanvas(){
 		var canvas = document.getElementById("a");
 		var context = canvas.getContext("2d");
@@ -138,7 +150,10 @@ img, object{
 	<!--calls the display image function when clicked to display random image-->
 	<a onclick="displayImage();" class = "w3-btn w3-black"> Molecule Image</a>
 	
+	<!--creating button to clear the canvas-->
+	<!--calls the clear canvas function when clicked to remove all items from canvas-->
 	<a onclick="clearCanvas();" class = "w3-btn w3-black"> Clear Canvas</a>
+	
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
