@@ -74,6 +74,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		}
 	}
 	
+	function clearCanvas(){
+		const context = canvas.getContext("2d");
+		context.clearRect(0, 0, canvas.width, canvas.height);
+	}
+	
 </script>
 
 
@@ -132,7 +137,7 @@ img, object{
 	<!--calls the display image function when clicked to display random image-->
 	<a onclick="displayImage();" class = "w3-btn w3-black"> Molecule Image</a>
 	
-	
+	<a onclick="clearCanvas();) class = "w3-btn w3-black"> Clear Canvas</a>
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
